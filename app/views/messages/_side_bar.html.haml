@@ -1,0 +1,24 @@
+-# <サイドバー>
+.side-bar
+  .side-bar__header
+    .side-bar__header__top-item
+      .side-bar__header__top-item__name
+        tera
+      %ul.side-bar__header__top-item__menu
+        %li.side-bar__header__top-item__edit-user
+          = link_to "#" do
+            %i.fa.fa-edit
+        %li.side-bar__header__top-item__new-group
+          = link_to "#" do
+            %i.fa.fa-cog
+  .side-bar__groups
+    .side-bar__groups__group
+      .group__name
+        TECHCAMP
+      %p.group__current-message
+        メッセージがあったような、なかったような...
+    .side-bar__groups__group
+      .group__name
+        TECHCAMP2
+      %p.group__current-message
+        メッセージがあったような、なかったような...

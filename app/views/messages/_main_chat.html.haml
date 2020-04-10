@@ -1,0 +1,37 @@
+-# <チャット画面>
+.chat-main
+  .chat-main__header
+    .chat-main__header__left-contents
+      .chat-main__header__left-contents__group-name
+        test
+      %ul.chat-main__header__left-contents__member-list
+        Member :
+        %li.member
+          tera
+    = link_to  "#", class:"chat-main__header__right-content" do
+      .edit-btn
+        Edit
+  .chat-main__message-list
+    .chat-main__message-list__messages
+      .create-by
+        .author
+          tera
+        .create-date
+          2020/04/09(thu) 15:41:00
+      .message
+        こんにちは！
+      .create-by
+        .author
+          tera
+        .create-date
+          2020/04/09(thu) 15:41:00
+      .message
+        こんにちは！
+  .chat-main__form
+    %form
+      %div.chat-main__form__input-area
+        %input.input-text{:placeholder => "type a message", :type => "text"}/
+        %label{class: "input-box__image"}
+          %i.far.fa-image.fa-lg
+          %input{type: "file", class: "input-file"}
+    %input.chat-main__form__submit-btn{:type => "submit", :name => "commit", :value => "Send"}
