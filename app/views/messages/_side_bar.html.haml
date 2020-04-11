@@ -6,19 +6,16 @@
         = current_user.name
       %ul.side-bar__header__top-item__menu
         %li.side-bar__header__top-item__edit-user
-          = link_to "#" do
+          = link_to new_group_path do
             %i.fa.fa-edit
         %li.side-bar__header__top-item__new-group
           = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
-  .side-bar__groups
-    .side-bar__groups__group
-      .group__name
-        TECHCAMP
-      %p.group__current-message
-        メッセージがあったような、なかったような...
-    .side-bar__groups__group
-      .group__name
-        TECHCAMP2
-      %p.group__current-message
-        メッセージがあったような、なかったような...
+  .groups
+    - current_user.groups.each do |group|
+      .groups__group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__current-message
+            メッセージがあったような、なかったような...

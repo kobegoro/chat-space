@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
 }
@@ -46,7 +51,7 @@
     }
   }
 
-  &__groups{
+  .groups{
     width: 300px;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
